@@ -64,7 +64,7 @@ class Track(Media):
             filename=self.download_path,
             sampling_rate=c.sampling_rate,
             bit_depth=c.bit_depth,
-            remove_source=True,  # always going to delete the old file
+            remove_source=False,  # always going to delete the old file
         )
         await engine.convert()
         self.download_path = engine.final_fn  # because the extension changed
