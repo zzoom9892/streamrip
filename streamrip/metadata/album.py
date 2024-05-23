@@ -120,7 +120,7 @@ class AlbumMetadata:
         quality = get_quality_id(bit_depth, sampling_rate)
         # Make sure it is non-empty list
         booklets = typed(resp.get("goodies", None) or None, list | None)
-        item_id = str(resp.get("qobuz_id"))
+        item_id = str(resp.get("id"))
 
         if sampling_rate and bit_depth:
             container = "FLAC"
