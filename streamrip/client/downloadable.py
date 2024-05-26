@@ -41,7 +41,7 @@ class Downloadable(ABC):
     session: aiohttp.ClientSession
     url: str
     extension: str
-    chunk_size = 10024
+    chunk_size = 20024
     _size: Optional[int] = None
 
     async def download(self, path: str, callback: Callable[[int], Any]):
